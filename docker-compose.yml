@@ -1,6 +1,24 @@
-version : "3.3"
-services :
-  web :
-     image : trainwithshubham/my-note-app:latest
-     ports :
-         - "8000:8000"
+version: "3.3"
+
+services:
+  web:
+    image: muhammadnaeem42/microservice:react-ui
+    ports:
+      - "3000:3000"
+
+  common-data-service:
+    image: muhammadnaeem42/microservice:common-data-service
+    # Add any additional configuration for this service if needed
+
+  authentication-service:
+    image: muhammadnaeem42/microservice:authentication-service
+    # Add any additional configuration for this service if needed
+
+  search-suggestion-service:
+    image: muhammadnaeem42/microservice:search-suggestion-service
+    # Add any additional configuration for this service if needed
+
+  payment-service:
+    image: muhammadnaeem42/microservice:payment-service
+    # Add any additional configuration for this service if needed
+
